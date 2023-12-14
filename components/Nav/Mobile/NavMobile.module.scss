@@ -1,0 +1,32 @@
+.animate {
+   right: 0 !important;
+   display: block !important;
+}
+
+.dropDownButton {
+   @media screen and (max-width: 1000px) {
+      display: block;
+   }
+   all: unset;
+   display: none;
+   
+   position: fixed;
+   top: 0;
+   right: 10px;
+   padding: 30px;
+   height: 50px;
+   z-index: 1001;
+}
+.stay {
+   @media screen and (max-width: 1000px) {
+      display: block;
+   }
+   display: none;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background: rgb(255, 255, 255);
+   top: 100px;
+   right: -1000px;
+   z-index: 2000;
+}

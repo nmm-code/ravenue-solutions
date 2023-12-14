@@ -1,0 +1,32 @@
+.anchor {
+   color: white;
+   text-decoration: none;
+}
+
+.button {
+   all: unset;
+   background: var(--contrast-color);
+   border-radius: 8px;
+   color: white;
+   font-weight: 400;
+   padding: 10px 30px;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   transition: all 0.2s ease-in-out;
+   border: 1px solid #a7a7a7;
+   &:hover {
+      color: rgb(0, 0, 0);
+      background-color: var(--second-color);
+   }
+}
+
+.white {
+   background: white;
+   color: #000000;
+   border: 1px solid #a7a7a7;
+   &:hover {
+      color: rgb(255, 255, 255);
+      background-color: var(--main-color);
+   }
+}

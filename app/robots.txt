@@ -1,0 +1,4 @@
+user-agent: *
+allow: /
+Disallow: /impressum
+Disallow: /en/imprint

@@ -1,0 +1,57 @@
+.container {
+	@media screen and (max-width: 900px) {
+		gap: 50px;
+		flex-direction: column-reverse;
+		position: relative;
+	}
+	@media screen and (max-width: 600px) {
+	}
+	max-width: 1200px;
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	background-color: #ece7f4;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0 0 0;
+	border-radius: 16px;
+	gap: 50px;
+	> * {
+		@media screen and (max-width: 900px) {
+			width: 95%;
+		}
+		width: 50%;
+	}
+}
+
+.main {
+	max-width: 500px;
+	> h2 {
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 56px;
+	}
+	> p {
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 24px;
+	}
+	> ul {
+		all: unset;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		> li:first-child {
+			margin-left: 0px !important;
+		}
+		> li {
+			margin: 20px;
+		}
+	}
+}
+

@@ -1,0 +1,138 @@
+:root {
+	font-display: optional;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	--main-color: #0a121d;
+	--second-color: #e7f1fb;
+	--contrast-color: #1173fa;
+}
+
+html {
+	scroll-padding-top: 100px;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.glas {
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+}
+
+a {
+	scroll-behavior: smooth;
+}
+.button {
+	all: unset;
+	background-color: var(--contrast-color);
+	border-radius: 8px;
+	color: white;
+	font-weight: 400;
+	padding: 10px 30px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	transition: all 0.2s ease-in-out;
+	border: 1px solid #a7a7a7;
+	&:hover {
+		color: rgb(0, 0, 0);
+		background-color: var(--second-color);
+	}
+}
+
+.hidden {
+	@media screen and (min-width: 600px) {
+		opacity: 0;
+		filter: blur(5px);
+		transform: translateY(20px);
+		transition: all 0.5s ease-in-out;
+	}
+}
+
+@for $i from 1 through 10 {
+	.hidden:nth-child(1n + #{$i}) {
+		transition-delay: $i * 0.3s;
+	}
+}
+
+.show {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+	.hidden {
+		transition: none;
+	}
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 22px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 2px;
+	bottom: 2px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:disabled + .slider {
+	background-color: rgba(0, 0, 0, 0.093);
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(18px);
+	-ms-transform: translateX(18px);
+	transform: translateX(18px);
+}
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}

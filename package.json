@@ -1,0 +1,36 @@
+{
+  "name": "ravenuesolutions.de",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hubspot/api-client": "^10.0.0",
+    "@react-email/render": "^0.0.7",
+    "client-only": "^0.0.1",
+    "dotenv": "^16.3.1",
+    "js-cookie": "^3.0.5",
+    "next": "13.5.4",
+    "nodemailer": "^6.9.6",
+    "react": "^18",
+    "react-calendly": "^4.3.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.69.0",
+    "sharp": "^0.32.6"
+  },
+  "devDependencies": {
+    "@types/gtag.js": "^0.0.17",
+    "@types/js-cookie": "^3.0.5",
+    "@types/node": "^20",
+    "@types/nodemailer": "^6.4.11",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "typescript": "^5"
+  }
+}
